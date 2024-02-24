@@ -12,11 +12,11 @@ public class Route66 extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-        from("file:/home/matjav/files/inbox?move=./done")
+        from("file:/home/matjav/apps/cameltest3/files/inbox?move=./done")
                 .log(LoggingLevel.INFO, LOG, "Route66 starting...")
                // .bean(new MyTransformer2(), "TransformContent")
                 .bean("messageProcessor", "handleMessage")
-                .to("file:/home/matjav/files/outbox");
+                .to("file:/home/matjav/apps/cameltest3/files/outbox");
     }
 }
 
