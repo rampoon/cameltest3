@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
     <Properties>
-        <Property name="logFolder">logs</Property>
+        <Property name="appFolder">/home/matjav/apps/cameltest3</Property>
+        <Property name="appName">cameltest3</Property>
     </Properties>
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
@@ -10,8 +11,8 @@
         </Console>
 
         <RollingFile name="RollingFile"
-                     fileName="${logFolder}/example3.log"
-                     filePattern="${logFolder}/$${date:yyyy-MM}/example3-%d{-dd-MMMM-yyyy}-%i.log.gz">
+                     fileName="${appFolder}/logs/${appName}.log"
+                     filePattern="${appFolder}/logs/$${date:yyyy-MM}/example3-%d{-dd-MMMM-yyyy}-%i.log.gz">
             <PatternLayout>
                 <pattern>%d %p %C{1.} [%t] %m%n</pattern>
             </PatternLayout>
